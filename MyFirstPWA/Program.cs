@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ooui;
+using System;
+using Xamarin.Forms;
 
 namespace MyFirstPWA
 {
@@ -6,7 +8,10 @@ namespace MyFirstPWA
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Forms.Init();
+
+            var mainPage = new MainPage();
+            UI.Publish("/", mainPage.GetOouiElement());
         }
     }
 }
